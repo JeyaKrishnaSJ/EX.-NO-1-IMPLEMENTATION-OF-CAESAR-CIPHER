@@ -99,8 +99,11 @@ int main()
 
 ## OUTPUT:
 Enter a message to encrypt: goodmorning
+
 Enter shift amount: 3
+
 Encrypted message: jrrgpruqlqj
+
 Decrypted message: goodmorning
 
 
