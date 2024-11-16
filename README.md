@@ -18,21 +18,16 @@ STEP-5: Display the cipher text obtained above.
 ## PROGRAM:
     #include <stdio.h>
     #include <string.h>
-
     void encrypt(char text[], int shift) {
     int i;
-    char ch;
-    
+    char ch; 
     for(i = 0; text[i] != '\0'; ++i) {
         ch = text[i];
-        
         if(ch >= 'A' && ch <= 'Z') {
             ch = ch + shift;
-            
             if(ch > 'Z') {
                 ch = ch - 'Z' + 'A' - 1;
             }
-            
             text[i] = ch;
         }
     
@@ -42,58 +37,44 @@ STEP-5: Display the cipher text obtained above.
             if(ch > 'z') {
                 ch = ch - 'z' + 'a' - 1;
             }
-            
             text[i] = ch;
         }
     }
     }
-
     void decrypt(char text[], int shift) {
     int i;
     char ch;
-    
     for(i = 0; text[i] != '\0'; ++i) {
         ch = text[i];
-        
         if(ch >= 'A' && ch <= 'Z') {
             ch = ch - shift;
-            
             if(ch < 'A') {
                 ch = ch + 'Z' - 'A' + 1;
-            }
-            
+            }            
             text[i] = ch;
-        }
-      
+        }      
         else if(ch >= 'a' && ch <= 'z') {
             ch = ch - shift;
             
             if(ch < 'a') {
                 ch = ch + 'z' - 'a' + 1;
-            }
-            
+            }            
             text[i] = ch;
         }
     }
     }
-
     int main() 
     {
     char text[100];
-    int shift;
-    
+    int shift;   
     printf("Enter a message to encrypt: ");
     gets(text);
-    
     printf("Enter shift amount: ");
     scanf("%d", &shift);
- 
     encrypt(text, shift);
     printf("Encrypted message: %s\n", text);
-    
     decrypt(text, shift);
     printf("Decrypted message: %s\n", text);
-    
     return 0;
     }
 
