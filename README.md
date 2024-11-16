@@ -16,10 +16,10 @@ STEP-4: Else subtract the key from the plain text.
 STEP-5: Display the cipher text obtained above.
 
 ## PROGRAM:
-#include <stdio.h>
-#include <string.h>
+    #include <stdio.h>
+    #include <string.h>
 
-void encrypt(char text[], int shift) {
+    void encrypt(char text[], int shift) {
     int i;
     char ch;
     
@@ -46,9 +46,9 @@ void encrypt(char text[], int shift) {
             text[i] = ch;
         }
     }
-}
+    }
 
-void decrypt(char text[], int shift) {
+    void decrypt(char text[], int shift) {
     int i;
     char ch;
     
@@ -75,10 +75,10 @@ void decrypt(char text[], int shift) {
             text[i] = ch;
         }
     }
-}
+    }
 
-int main() 
-{
+    int main() 
+    {
     char text[100];
     int shift;
     
@@ -95,7 +95,7 @@ int main()
     printf("Decrypted message: %s\n", text);
     
     return 0;
-}
+    }
 
 ## OUTPUT:
 Enter a message to encrypt: goodmorning
