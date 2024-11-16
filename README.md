@@ -98,14 +98,7 @@ STEP-5: Display the cipher text obtained above.
     }
 
 ## OUTPUT:
-Enter a message to encrypt: goodmorning
-
-Enter shift amount: 3
-
-Encrypted message: jrrgpruqlqj
-
-Decrypted message: goodmorning
-
+![cc](https://github.com/user-attachments/assets/f7c051fd-a1f5-4c16-b90b-15612e675366)
 
 ## RESULT :
  Thus the implementation of ceasar cipher had been executed successfully.
